@@ -1,0 +1,20 @@
+<ion-content [fullscreen]="true">
+  <div class="container">
+    <div class="emoji-text">
+      <h1>Choose how you've felt overall today</h1>
+      <img
+        *ngFor="let item of emojisArray"
+        [ngClass]="{'activated':selectedEmojiId === item.id} "
+        [class]="item.name"
+        [src]="item.imgSrc"
+        [alt]="item.name"
+      />
+    </div>
+    <div class="range-container">
+      <ion-range
+        aria-label="Emotions Range"
+        (ionKnobMoveEnd)="ionKnobMoveEnd($event)"
+      ></ion-range>
+    </div>
+  </div>
+</ion-content>
