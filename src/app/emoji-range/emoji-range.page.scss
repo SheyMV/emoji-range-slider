@@ -54,5 +54,9 @@
             padding-right: 43px;
             right: -21px;
         }
+
+        .ios &::part(bar) {
+            padding-right: 35px;
+        }
     }
 }
